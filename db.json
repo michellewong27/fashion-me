@@ -2,22 +2,22 @@
   "imgs" : [
     {
       "id" : 1,
-      "img" : "https://valentino-cdn.thron.com/delivery/public/image/valentino/7572eaae-3547-48d2-bb61-8dca254ec684/VA14I6D/std/640x0/hp_mobile-duvet.jpg?quality=80",
+      "src" : "https://valentino-cdn.thron.com/delivery/public/image/valentino/7572eaae-3547-48d2-bb61-8dca254ec684/VA14I6D/std/640x0/hp_mobile-duvet.jpg?quality=80",
       "headline" : true
     },
     {
       "id" : 2,
-      "img": "https://valentino-cdn.thron.com/delivery/public/image/valentino/7572eaae-3547-48d2-bb61-8dca254ec684/VA14I6D/std/750x0/hp_mobile-duvet.jpg?quality=80",
+      "src": "https://valentino-cdn.thron.com/delivery/public/image/valentino/7572eaae-3547-48d2-bb61-8dca254ec684/VA14I6D/std/750x0/hp_mobile-duvet.jpg?quality=80",
       "headline": false
     },
     {
       "id" : 3,
-      "img" : "https://valentino-cdn.thron.com/delivery/public/image/valentino/7572eaae-3547-48d2-bb61-8dca254ec684/VA14I6D/std/828x0/hp_mobile-duvet.jpg?quality=80",
+      "src" : "https://valentino-cdn.thron.com/delivery/public/image/valentino/7572eaae-3547-48d2-bb61-8dca254ec684/VA14I6D/std/828x0/hp_mobile-duvet.jpg?quality=80",
       "headline": false
     },
     {
       "id" : 4,
-      "img" : "https://valentino-cdn.thron.com/delivery/public/image/valentino/7572eaae-3547-48d2-bb61-8dca254ec684/VA14I6D/std/1080x0/hp_mobile-duvet.jpg?quality=80",
+      "src" : "https://valentino-cdn.thron.com/delivery/public/image/valentino/7572eaae-3547-48d2-bb61-8dca254ec684/VA14I6D/std/1080x0/hp_mobile-duvet.jpg?quality=80",
       "headline": false
     }
   ]

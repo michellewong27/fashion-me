@@ -16,16 +16,18 @@ function getImgs(){
     return body.json();
   })
   .then(function (img) {
-    console.log(img)
-    // img.forEach()
+    img.forEach(createHomeImg)
   })
 }
+getImgs();
 
-function createHomeImg(){
+function createHomeImg(img){
   const imgDiv = document.createElement("div");
   imgDiv.className = "img-div";
   content.appendChild(imgDiv);
-
-  const img = document.createElement("img")
-
+  const imgElement = document.createElement("img")
+  if(img.headline){
+    imgElement.src = `${img.src}`
+  }
+  imgDiv.appendChild(imgElement);
 }
