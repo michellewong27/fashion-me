@@ -16,7 +16,8 @@ function getImgs(){
     return body.json();
   })
   .then(function (img) {
-    img.forEach(createHomeImg)
+    img.forEach(createHomeImg);
+    img.forEach(createRadioBtn);
   })
 }
 getImgs();
@@ -30,4 +31,25 @@ function createHomeImg(img){
     imgElement.src = `${img.src}`
   }
   imgDiv.appendChild(imgElement);
+}
+
+//creates the slider divs then calls on creating radio btn
+// function renderImgSlider(){
+  const sliderDiv = document.createElement("div");
+  sliderDiv.className = "slider" 
+  content.appendChild(sliderDiv);
+  const slidesDiv = document.createElement("div");
+  slidesDiv.className = "slides";
+  sliderDiv.appendChild(slidesDiv);
+// }
+// renderImgSlider()
+
+function createRadioBtn(img){
+  
+  const radioBtn = document.createElement("input");
+  radioBtn.type = "radio";
+  radioBtn.name = "radio-btn";
+  radioBtn.id = `radio${img.id}`;
+  slidesDiv.appendChild(radioBtn);
+  console.log(radioBtn);
 }
