@@ -10,16 +10,16 @@ function closeNav() {
 
 const content = document.getElementById("content");
 
-function getImgs(){
+function getImgs() {
   fetch(`http://localhost:3000/imgs`)
-  .then(function (body){
-    return body.json();
-  })
-  .then(function (img) {
-    // img.forEach(createHomeImg);
-    img.forEach(renderImg);
-    img.forEach(createRadioBtn);
-  })
+    .then(function (body) {
+      return body.json();
+    })
+    .then(function (img) {
+      // img.forEach(createHomeImg);
+      img.forEach(createRadioBtn);
+      img.forEach(renderImg);
+    });
 }
 getImgs();
 
@@ -34,22 +34,20 @@ getImgs();
 //   imgDiv.appendChild(imgElement);
 // }
 
-
-
 //creates the slider divs then calls on creating radio btn
 // function renderImgSlider(){
-  const sliderDiv = document.createElement("div");
-  sliderDiv.className = "slider" 
-  content.appendChild(sliderDiv);
-  const slidesDiv = document.createElement("div");
-  slidesDiv.className = "slides";
-  sliderDiv.appendChild(slidesDiv);
-  const radioInputsDiv = document.createElement("div");
-  radioInputsDiv.className = "radio-inputs";
+const sliderDiv = document.createElement("div");
+sliderDiv.className = "slider";
+content.appendChild(sliderDiv);
+const slidesDiv = document.createElement("div");
+slidesDiv.className = "slides";
+sliderDiv.appendChild(slidesDiv);
+const radioInputsDiv = document.createElement("div");
+radioInputsDiv.className = "radio-inputs";
 // }
 // renderImgSlider()
 
-function createRadioBtn(img){
+function createRadioBtn(img) {
   const radioBtn = document.createElement("input");
   radioBtn.type = "radio";
   radioBtn.name = "radio-btn";
@@ -59,11 +57,26 @@ function createRadioBtn(img){
 
 //has to go after radio btns
 //creating divs & img tags for each img
-function renderImg(img){
+function renderImg(img) {
   const slideDiv = document.createElement("div");
   slideDiv.className = `slide${img.id}`;
   slidesDiv.appendChild(slideDiv);
   const imgTag = document.createElement("img");
   imgTag.src = `${img.src}`;
   slideDiv.appendChild(imgTag);
-};
+
+  createAutoBtn(img)
+}
+
+//create automatic navigation to go after div class of slides^
+  const navDiv = document.createElement("div");
+  navDiv.className = "navigation-auto"
+  //append this to the last div slide^
+
+function createAutoBtn(img){
+  //create as many imgs, autoDivBtns
+  const autoBtnDiv = document.createElement("div");
+  autoBtnDiv.className = `auto-btn${img.id}`
+  //append these autoDivBtn's to navDiv
+  navDiv.appendChild(autoBtnDiv);
+}
