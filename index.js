@@ -59,7 +59,7 @@ function createRadioBtn(img) {
 //creating divs & img tags for each img
 function renderImg(img) {
   const slideDiv = document.createElement("div");
-  slideDiv.className = `slide${img.id}`;
+  slideDiv.className = 'slide';
   slidesDiv.appendChild(slideDiv);
   const imgTag = document.createElement("img");
   imgTag.src = `${img.src}`;
@@ -68,10 +68,18 @@ function renderImg(img) {
   createAutoBtn(img)
 }
 
-//create automatic navigation to go after div class of slides^
+
+
+
+  //create automatic navigation to go after div class of slides^
   const navDiv = document.createElement("div");
   navDiv.className = "navigation-auto"
-  //append this to the last div slide^
+
+
+//append nav div to the slides div
+  slidesDiv.appendChild(navDiv)
+  //then had autoBtnDiv's append to navDiv
+
 
 function createAutoBtn(img){
   //create as many imgs, autoDivBtns
