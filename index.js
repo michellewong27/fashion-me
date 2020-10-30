@@ -60,31 +60,37 @@ function createRadioBtn(img) {
 function renderImg(img) {
   const slideDiv = document.createElement("div");
   slideDiv.className = 'slide';
+  slideDiv.id = `slide${img.id}`;
   slidesDiv.appendChild(slideDiv);
   const imgTag = document.createElement("img");
   imgTag.src = `${img.src}`;
   slideDiv.appendChild(imgTag);
-
-  createAutoBtn(img)
+  createAutoBtn(img);
+  createManualBtn(img);
 }
 
 
+  //******create automatic navigation to go after last div "slide" ^
+  const navAutoDiv = document.createElement("div");
+  navAutoDiv.className = "navigation-auto";
+  slidesDiv.appendChild(navAutoDiv);
 
 
-  //create automatic navigation to go after div class of slides^
-  const navDiv = document.createElement("div");
-  navDiv.className = "navigation-auto"
 
-
-//append nav div to the slides div
-  slidesDiv.appendChild(navDiv)
-  //then had autoBtnDiv's append to navDiv
-
-
+//all 4 go inside navigation-auto
 function createAutoBtn(img){
-  //create as many imgs, autoDivBtns
   const autoBtnDiv = document.createElement("div");
   autoBtnDiv.className = `auto-btn${img.id}`
-  //append these autoDivBtn's to navDiv
-  navDiv.appendChild(autoBtnDiv);
+  navAutoDiv.appendChild(autoBtnDiv);
+}
+
+const navManualDiv = document.createElement("div");
+navManualDiv.className = "navigation-manual";
+sliderDiv.appendChild(navManualDiv);
+
+function createManualBtn(img){
+  const manualBtn = document.createElement("label");
+  manualBtn.htmlFor = `radio${img.id}`;
+  manualBtn.className = `manual-btn`;
+  navManualDiv.appendChild(manualBtn);
 }
