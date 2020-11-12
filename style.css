@@ -36,8 +36,32 @@ body {
   height: 500px;
 }
 
+/* CSS for manual slide navigation */
 
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
 
+.manual-btn{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+/* When clicking on btn it highlights the bubble */ 
+.manual-btn:hover{
+  background: #40D3DC;
+}
 
 
 /* sidebar css below */
