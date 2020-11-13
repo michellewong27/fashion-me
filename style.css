@@ -6,7 +6,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #23E3C9;
+  background: #23e3c9;
 }
 
 .slider {
@@ -16,7 +16,7 @@ body {
   overflow: hidden;
 }
 
-.slides{
+.slides {
   width: 500%;
   height: 500px;
   display: flex;
@@ -26,12 +26,12 @@ body {
   display: none;
 }
 
-.slide{
+.slide {
   width: 20%;
   transition: 2s;
 }
 
-.slide img{
+.slide img {
   width: 800px;
   height: 500px;
 }
@@ -46,21 +46,35 @@ body {
   justify-content: center;
 }
 
-.manual-btn{
-  border: 2px solid #40D3DC;
+.manual-btn {
+  border: 2px solid #40d3dc;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
   transition: 1s;
 }
 
-.manual-btn:not(:last-child){
+.manual-btn:not(:last-child) {
   margin-right: 40px;
 }
 
-/* When clicking on btn it highlights the bubble */ 
-.manual-btn:hover{
-  background: #40D3DC;
+/* When clicking on btn it highlights the bubble */
+.manual-btn:hover {
+  background: #40d3dc;
+}
+
+#radio1:checked ~ #slide1{
+  margin-left: 0;
+}
+
+#radio2:checked ~ #slide1{
+  margin-left: -20%;
+}
+#radio3:checked ~ #slide1{
+  margin-left: -40%;
+}
+#radio4:checked ~ #slide1{
+  margin-left: -60%;
 }
 
 
