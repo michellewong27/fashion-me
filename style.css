@@ -98,6 +98,19 @@ body {
 }
 
 
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+}
+#radio2:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+}
+#radio3:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+}
+#radio4:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+}
+
 
 /* sidebar css below */
 .sidebar {
